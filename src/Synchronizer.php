@@ -173,7 +173,7 @@ class Synchronizer
      */
     private function isExposed($container)
     {
-        if (empty($container['NetworkSettings']['Ports']) || empty($container['State']['Running'])) {
+        if (empty($container['State']['Running']) || empty($container['NetworkSettings']['Ports'])) {
             return false;
         }
 
